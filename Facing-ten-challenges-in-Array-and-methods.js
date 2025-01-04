@@ -15,77 +15,134 @@
 3. You have an array named `teaTypes` containing `"herbal tea"`, `"white tea"`, and `"masala chai"`. 
    Change the second element of the array to `"jasmine tea"`.
 */
-//  const teaType =["herbal tea", "white tea","masala chai"]
-//  teaType[1]= "jasmine tea";
-//  console.log(teaType)
-
+//   const teaTypes = new Array("herbal tea", "white tea",  "masala chai")
+//  teaTypes.pop();
+//  console.log(teaTypes)
+//  teaTypes.push("jasmine tea");
+//  console.log(teaTypes)
+ 
 /* 
 4. Declare an array named `citiesVisited` containing `"Mumbai"` and `"Sydney"`. 
    Add `"Berlin"` to the array using the `push` method.
 */
-//  const citiesVisited = ["Mumbai", "Sydney"]
-//  const citiesVisitedPush= citiesVisited.push("Berlin");
-//  console.log(citiesVisitedPush)
-//  console.log(citiesVisited);
+// 
+// const citiesVisited = new Array("Mumbai" , "Sydeney");
+// citiesVisited.push("Berlin"); 
+// console.log(citiesVisited)
+// citiesVisited[citiesVisited.length] = "delhi"
+
+// console.log(citiesVisited)
 
 /* 
 5. You have an array named `teaOrders` with `"chai"`, `"iced tea"`, `"matcha"`, and `"earl grey"`. 
    Remove the last element of the array using the `pop` method and store it in a variable named `lastOrder`.
 */
-// const teaOrders = ["chai", "iced tea", "matcha","earl grey"];
-// const teaOrderPop=teaOrders.pop();
-// console.log(teaOrderPop)
-// console.log(teaOrders)
+ 
+// const teaOrders = new Array("chai", "iced tea", "matcha", "earl grey");
+// const lastOrder = teaOrders.pop();
+// console.log(lastOrder);
+
  
 /* 
 6. You have an array named `popularTeas` containing `"green tea"`, `"oolong tea"`, and `"chai"`. 
    Create a soft copy of this array named `softCopyTeas`.
 */
-//  const popularTeas= ["green tea", "oolong tea", "chai"]
-//  const softCopyTeas= popularTeas;
+ let popularTeas = new Array("green tea", "oolong tea",   "chai") 
+ let copy = popularTeas;
+
+ //copy is assigned directly to popularTeas, creating a reference copy, 
+ //meaning both copy and popularTeas point to the same array in memory.
+//  console.log(copy);
+
+ //Creates a shallow copy of popularTeas. It produces a new array 
+ //with the same elements.
+//  let softCopyTeas = Array.from(popularTeas);
+//  let slicepopularTeas = popularTeas.slice();
+//  let spreadoperatorpopularTeas = [...popularTeas]
+//  console.log(softCopyTeas);
+
+
 //  popularTeas.pop();
-//  console.log(popularTeas);// here this is softcopy because if we do the pop operation than 
-//                           // it effect on copy so this softcopy we can change
+// reference copy
+//  console.log(popularTeas);
+//  console.log(copy);
+
+ // shallow copy
+//  console.log(slicepopularTeas);
+//  console.log(spreadoperatorpopularTeas); 
+//  console.log(softCopyTeas);
+
+ //For a true deep copy, you'll need to use libraries like Lodash or techniques like 
+
+ //JSON.parse(JSON.stringify(array)).
  
 /* 
 7. You have an array named `topCities` containing `"Berlin"`, `"Singapore"`, and `"New York"`. 
    Create a hard copy of this array named `hardCopyCities`.
 */
-//  const topCities =["Berlin","Singapore","New York"];
-//  const hardCopyCities = [...topCities];// hardCopyCities 
-//  topCities.pop();
- 
-//  console.log(topCities);// as u can see i original one is effect by pop
-//  console.log(hardCopyCities);// but harrdCopy is stll same
- 
+
+// const topCities = new Array("Berlin", "Singapore", "New York")
+// const SpreadOperaterHardCopyCities = [...topCities];
+// const sliceHardCopy = topCities.slice();
+// const hardCopyCities = Array.from(topCities);
+
+// topCities.pop();
+// topCities.push("delhi");
+
+// console.log(topCities);
+// console.log(SpreadOperaterHardCopyCities);
+// console.log(sliceHardCopy);
+// console.log(hardCopyCities);
+
+
+
 
 /* 
 8. You have two arrays: `europeanCities` containing `"Paris"` and `"Rome"`, and `asianCities` containing `"Tokyo"` and `"Bangkok"`. 
    Merge these two arrays into a new array named `worldCities`.
 */
  
-// const europeanCities =["Paris","Rome"];
-// const asianCities = ["Tokyo", "Bangkok"];
-// const worldCities=europeanCities.concat(asianCities)
+// const europeanCities = ["paris" ,"Rome"];
+// const asianCities = ["Tokayo", "Bangkok"];
+
+// const worldCities = europeanCities.concat(asianCities);
 // console.log(worldCities);
+
+ 
 
 /* 
 9. You have an array named `teaMenu` containing `"masala chai"`, `"oolong tea"`, `"green tea"`, and `"earl grey"`. 
    Find the length of the array and store it in a variable named `menuLength`.
 */
 
-// const teaMenu = ["masala chai","oolong tea","green tea","earl grey"]
-// const menuLength=teaMenu.length;
-// console.log(menuLength)
+// const teaMenu = new Array("masala chai", "oolong tea", "green tea", "earl grey");
+// const menuLength = teaMenu.length;
+// console.log(menuLength);
+
+ 
  
 /* 
 10. You have an array named `cityBucketList` containing `"Kyoto"`, `"London"`, `"Cape Town"`, and `"Vancouver"`. 
     Check if `"London"` is in the array and store the result in a variable named `isLondonInList`.
-*/
+*/ 
+//  const cityBucketList = ["Kyoto", "London", "Cape Town", "Vancouver"];
 
-// const cityBucketList =["Kyoto","London","Cape Town","Vancouver"]
-// const isLondonInList = cityBucketList.includes("London");
-// const isBombayList = cityBucketList.includes("Bomby");
-// console.log(isLondonInList,isBombayList)
+//  //Use includes() if you just want to check for existence.
+//   console.log(cityBucketList.includes("London"));
 
+// //Use indexOf() or findIndex() to find the index.
+//  const checkOnIndex = cityBucketList.indexOf("London");
+//   console.log(checkOnIndex);
+ 
+//   // slice is use for take the london out actually it makes the copy
+//  const isLondonInList = cityBucketList.slice(1,2)
+//  console.log(isLondonInList);
+ 
+
+//  //Use find() if you want the value.
+//  const filterLondon =  cityBucketList.find((city) => city==="London");
+//  console.log(filterLondon);
+
+//  console.log(cityBucketList)
+ 
 
