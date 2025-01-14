@@ -38,7 +38,7 @@ const team = {
     return this.members.forEach((player) => { console.log(`Team member: ${player}`) })
   }
 }
-team.printMember();
+// team.printMember();
 
 //  Question   //Advanced: Dynamic this Binding
 // Create an object counter with properties count and step and methods:
@@ -46,3 +46,11 @@ team.printMember();
 // decrement(): Subtracts step from count.
 // reset(): Resets count to 0.
 // Bind the increment() and decrement() methods to another object and test.
+
+function outer(){
+  function inner(){
+      return 'Inner function called';
+  }
+  inner();
+}
+console.log(outer())
