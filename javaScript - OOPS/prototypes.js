@@ -18,3 +18,4 @@ let hp={
 }
 console.log(hp.__proto__);
 console.log("check git in formated laptop" ")
+console.log("check git in formated laptop i  check know ssh key " ")
