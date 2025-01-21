@@ -17,3 +17,4 @@ let hp={
     __proto__ :computerHP
 }
 console.log(hp.__proto__);
+console.log("check git in formated laptop" ")
